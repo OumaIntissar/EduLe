@@ -40,7 +40,7 @@ public class Course implements Serializable{
 	
 	@ManyToOne
 	@JsonProperty(access = Access.WRITE_ONLY)
-	private Instructor instructor;
+	private User user;
 	
 	
 }
