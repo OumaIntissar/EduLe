@@ -1,12 +1,13 @@
 package org.sid.edule.entities;
 
 import java.io.Serializable;
+import java.util.Collection;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToMany;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -22,7 +23,7 @@ public class Role implements Serializable{
 	private Long id;
 	private String name;
 	
-	@OneToOne (mappedBy = "role")
-	private User use;
+	@ManyToMany
+	private Collection<User> user;
 
 }
